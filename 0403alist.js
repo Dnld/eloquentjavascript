@@ -32,6 +32,14 @@ function prepend(element, list) {
 	return list
 }
 
+function nth(list, number) {
+	for (var i = 0; i < number; i++) {
+		list = list.rest;
+	};
+	return list.value
+}
+
 console.log(arrayToList([10, 20, 30, 40, 50]));
 console.log(listToArray(arrayToList([10, 20, 30])));
 console.log(prepend(10, prepend(20, null)));
+console.log(nth(arrayToList([10, 20, 30]), 1));
