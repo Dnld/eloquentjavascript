@@ -26,5 +26,12 @@ function listToArray (listToConvert) {
 	return newArray
 }
 
+function prepend(element, list) {
+	tempList = list
+	list = {value: element, rest: tempList}
+	return list
+}
+
 console.log(arrayToList([10, 20, 30, 40, 50]));
 console.log(listToArray(arrayToList([10, 20, 30])));
+console.log(prepend(10, prepend(20, null)));
