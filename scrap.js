@@ -356,10 +356,10 @@ var ANCESTRY_FILE = "[\n  " + [
 
 // repeat(5, sayHello);
 
-var family = {
-  son1 : 'Donald',
-  son2 : 'Thomas',  
-};
+// var family = {
+//   son1 : 'Donald',
+//   son2 : 'Thomas',  
+// };
 
 // var sayHello = function(name) {
 //   for (var i = 0; i < arguments.length; i++) {
@@ -375,38 +375,63 @@ var family = {
 
 // console.log(JSON.parse(string).son1);
 
-var ancestry = JSON.parse(ANCESTRY_FILE);
-// console.log(ancestry);
+// var ancestry = JSON.parse(ANCESTRY_FILE);
+// // console.log(ancestry);
 
-var filter = function(arr, test) {
-  var passed = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (test(arr[i])) {
-      passed.push(arr[i]);
-    }
-  }
-  return passed;
-};
+// var filter = function(arr, test) {
+//   var passed = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     if (test(arr[i])) {
+//       passed.push(arr[i]);
+//     }
+//   }
+//   return passed;
+// };
 
-var livedIn20thCentury = filter(ancestry, function(person) {
-  return person.born >= 1900 && person.died <= 2000;
-});
+// var livedIn20thCentury = filter(ancestry, function(person) {
+//   return person.born >= 1900 && person.died <= 2000;
+// });
 
-var map = function(arr, transform) {
-  var mapped = [];
-  for (var i = 0; i < arr.length; i++) {
-    mapped.push(transform(arr[i]));
-  }
-  return mapped;
-};
+// var map = function(arr, transform) {
+//   var mapped = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     mapped.push(transform(arr[i]));
+//   }
+//   return mapped;
+// };
 
-var namesOfThoseWhoLivedIn20thCentury = map(livedIn20thCentury, 
-  function(person) {
-    return person.name;
-  }
-);
+// var namesOfThoseWhoLivedIn20thCentury = map(livedIn20thCentury, 
+//   function(person) {
+//     return person.name;
+//   }
+// );
 
-console.log(namesOfThoseWhoLivedIn20thCentury);
+// console.log(namesOfThoseWhoLivedIn20thCentury);
+
+// var reduce = function(arr, action, start) {
+//   var reduction = start;
+//   for (var i = 0; i < arr.length; i++) {
+//     reduction = action(reduction, arr[i]);
+//   }
+//   return reduction;
+// };
+
+// var arr1 = [1,2,3,4,5,6,7];
+
+// var result = reduce(arr1, function(a, b) {
+//   return a + b;
+// }, 56);
+
+// console.log(result);
+
+// var arr = [1, 2, 3];
+
+// var print = function(s) {console.log(s);};
+
+// arr.forEach(print);
+
+
+
 
 
 
