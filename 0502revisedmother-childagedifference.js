@@ -74,6 +74,7 @@ var map = function(arr, transform) {
   return mapped;
 };
 
+// reduce helper function
 var reduce = function(arr, action, start) {
   var reduction = start;
   for (var i = 0; i < arr.length; i++) {
